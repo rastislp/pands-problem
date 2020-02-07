@@ -13,7 +13,7 @@ print("Excercise 3.")
 print() #blank line
 
 #height = float(input ("Please enter your hight: "))
-str = (input ("Please enter a sentence to be reversed!"))
+str = (input ("Please enter a sentence to be reversed:  "))
 
 
 #str = 'The quick brown fox jumps over the lazy dog.' #initial string
