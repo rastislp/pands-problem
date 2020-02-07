@@ -11,10 +11,12 @@ number= int(input ("Please choose your posiive number:  "))
 
 if (number % 2) == 0 and number>0: #if number modelo 2 = 0 and greater than 0
     x=number/2
-    print(x)
+    print("Answer is: ",x)
 elif(number %2) ==1 and number>0: #if number modelo 2 = 1 and greater than 0
     x= (number*3) +1
-    print(x)
+    print("Answer is: ",x)
 else:
     number <0
-    print("This is not positive number")     
+    print("This is not positive number")  
+print()     
+print("Program Terminated")      
