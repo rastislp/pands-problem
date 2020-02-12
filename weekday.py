@@ -9,6 +9,8 @@ print("Welcome in day teller.")
 print()
 
 import datetime
+import calendar
+
 x = datetime.datetime.now()
 print(x)
 
@@ -16,6 +18,17 @@ print(x)
 year = int(input('Enter a year: '))
 month = int(input('Enter a month: '))
 day = int(input('Enter a day: '))
-date1 = datetime.date(year, month, day)
 
-print(date1)
+date1 = calendar.weekday(year, month, day)
+date2 = datetime.date(year, month, day)
+date3 = calendar.day_name[date1]
+
+print("Day you have entered", date2, "is: ",date1)
+
+#if (date1 % 7) ==0 :
+#    print("Monday")
+#elif (date1 %7 ) ==1 :
+#    print("Tuesday")
+#else:
+#    print("W-S")
+
