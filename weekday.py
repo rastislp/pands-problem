@@ -11,8 +11,30 @@ print()
 import datetime
 import calendar
 
-x = datetime.datetime.now()
-print(x)
+x = datetime.datetime.today()
+
+
+year = x.strftime("%Y")
+#print("year:", year)
+month = x.strftime("%m")
+#print("month:", month)
+day = x.strftime("%d")
+#print("day:", day)
+
+year = int(year)
+month  = int(month)
+day = int(day)
+
+
+z = calendar.weekday(year, month,day)
+#print(z)
+
+if (z < 5):
+    print("Today",x ,"is a week day, unfortunately ;-(")
+else:
+    print("Today",x ,"is a weekend ;-)")
+
+print()    
 
 
 year = int(input('Enter a year: '))
@@ -23,12 +45,6 @@ date1 = calendar.weekday(year, month, day)
 date2 = datetime.date(year, month, day)
 date3 = calendar.day_name[date1]
 
-print("Day you have entered", date2, "is: ",date1)
+print("Day you have entered", date2, "is: ",date3)
 
-#if (date1 % 7) ==0 :
-#    print("Monday")
-#elif (date1 %7 ) ==1 :
-#    print("Tuesday")
-#else:
-#    print("W-S")
 
