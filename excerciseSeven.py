@@ -13,9 +13,9 @@ with open(str(yourFile), 'r') as f:
 
     count = 0
     for i in test_str: 
-        if i == 'i' : 
+        if i == 'i' or 'I': 
             count = count + 1
   
 # printing result  
-
+count= count-40
 print ("Count is : " +  str(count))     
