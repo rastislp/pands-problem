@@ -87,7 +87,7 @@ for x in range (y):
     end_time = time.time ()
     time_elapsed = end_time - start_time
     total = total + time_elapsed
- result5 = (round((total/y),4))
+result5 = (round((total/y),4))
 
 for x in range (y):
     start_time = time.time()
@@ -159,7 +159,7 @@ for x in range (y):
     end_time = time.time ()
     time_elapsed = end_time - start_time
     total = total + time_elapsed
- result13 = (round((total/y),4))
+result13 = (round((total/y),4))
 
 print(result1)
 print(result2)
