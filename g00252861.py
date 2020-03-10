@@ -1,9 +1,8 @@
-import random
-import time
-import plotly.graph_objects as go
+import random   # importing module that holds a functions to generate random numbers
+import time     # importing module that holds a functions and counter to work wih time 
 
 
-def bubble_sort(nlist):
+def bubble_sort(nlist):         # defined function of Bubble sort algorithm
     for passnum in range(len(nlist)-1,0,-1):
         for i in range(passnum):
             if nlist[i]>nlist[i+1]:
@@ -88,35 +87,34 @@ def pancake_sort(nlist):
         arr_len -= 1
     return nlist
 
-
-
-y = 10       # defined  amount of sampling
-list1 =[100,250,500,750,1000,1250,2500,3750,5000,6750,7500,8750,10000]     # array of input size n
+y = 10       # y is initialized to 10 defined  amount of sampling. 
+list1 =[101,251,501,751,1001,1251,2501,3751,5001,6751,7501,8751,10001]     # array of input size n 
 
 print()
 print("**************************************************************************************************************************************************************")
 print("   100       250        500        750       1000       1250       2500       3750       5000       6750       7500       8750       10000      size n       *")
-total = 0      # used for purpouse of mean(average)
-i = 0
-while i < len(list1):
-    r = list1[i] 
+
+total = 0      # total is initialized to 0 used for purpouse of mean(average)
+i = 0          # i is initialized to 0
+while i < len(list1):   # while loop is used to assign elements of array list1  
+    r = list1[i]        # to variable r which is a top limit of range in formula below
     list1[i] = list1[i] 
-    i = i + 1
+    i = i + 1       # increment array index 
     
-    for x in range (y):
-        start_time = time.time()
-        nlist = [random.randint(0, 100000)
-        for x in range(1, r)]
-        #print(nlist)
-        bubble_sort(nlist)
-        #print(nlist)
-        end_time = time.time ()
-        time_elapsed = end_time - start_time
-        total = total + time_elapsed
-        res =(f'{ (round((total/y),4)):2.4f}')
-        res = res.zfill(7)
-    print(res, end= "    ")
-print("bubble sort   *")
+    for x in range (y):       #
+        start_time = time.time()        #definning and assigning start_time (start clock)
+        nlist = [random.randint(0, 100000)       # generating un-ordered list(nlist) from range 0-99999
+        for x in range(1, r)]        # for loop that runs "r" times -> defined earlier in while loops 
+        #print(nlist)       # debug purpouse prints un-ordered list
+        bubble_sort(nlist)  # performing desired function SORTING
+        #print(nlist)       # debug purpouse prints ordered list
+        end_time = time.time ()        #definning and assigning end_time 
+        time_elapsed = end_time - start_time    #calculates elapsed time 
+        total = total + time_elapsed    # adding current elapsed time to previous total 
+        res =(f'{ (round((total/y),4)):2.4f}')    # performing  calculation of average total(10) time_samples + formatting to 4 dec. spaces
+        res = res.zfill(7)     # formating output to seven digit number including 4 dec. spaces / filling space with 0 if less than 7 
+    print(res, end= "    ")    # inline print of result with space appart
+print("bubble sort   *")       # inline print of name algorithm used 
 
 
 total =0
@@ -211,3 +209,5 @@ while i < len(list1):
 print("pancake sort  * ")    
 
 print("**************************************************************************************************************************************************************")
+
+#-----------------------------This is end of application----------------------------#
