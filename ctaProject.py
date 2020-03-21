@@ -35,7 +35,6 @@ sample13 =1000
 #    i = i*10
 
 for x in range (y):
-
     start_time = time.time()
     nlist = [random.randint(0, 10000) for x in range(1, sample1)]
     #print(nlist)
@@ -48,12 +47,8 @@ for x in range (y):
     #print(total)   
 #print(round((total/y),4))  # average time of 10 sampllings
 result1 = (round((total/y),4))
-print()
-
- 
 
 for x in range (y):
-
     start_time = time.time()
     nlist = [random.randint(0, 10000) for x in range(1, sample2)]
     bubbleSort(nlist)
