@@ -18,4 +18,4 @@ str = (input ("Please enter a sentence to be reversed:  "))
 
 #str = 'The quick brown fox jumps over the lazy dog.' #initial string
 reversed=''.join(reversed(str)) # .join() method merges all of the characters resulting from the reversed iteration into a new string
-print(reversed[0:45:2]) #print the reversed string
+print(reversed[0:len(str):2]) #print the reversed string 

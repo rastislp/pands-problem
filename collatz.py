@@ -24,16 +24,16 @@
 #print()     
 #print("Program Terminated")      
 
-number= int(input ("Please choose your posiive number:  "))
-while(number > 1):
-    if (number % 2) == 0:
-        print(number," ")
-        number=number/2
+number= int(input ("Please choose your posiive number:  "))  #promt user to enter positive integer
+while(number > 1):   #while loop continue running until condition is meet.
+    if (number % 2) == 0:   # if number is dividible without remainder
+        print(number)   #print current number
+        number=number/2    #divide current number by 2     
         
-    else : 
-       print(number)
-       number= (number*3)+1      
-print(1.0)        
+    else :           # otherwise  
+       print(number)   #print odd number 
+       number= (number*3)+1      #perform multiplication and add 1 to current number
+print(1.0)        #print last figure 1 
 
            
-#took me while as imissread but finallygot it
+#took me while as i missread but finally got it
