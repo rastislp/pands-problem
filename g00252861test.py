@@ -1,8 +1,3 @@
-#Rastislav Petras
-#G00252861
-#CTA project
-#Benchmarking Sorting Algorithms
-
 import random   # importing module that holds a functions to generate random numbers
 import time     # importing module that holds a functions and counter to work wih time 
 
